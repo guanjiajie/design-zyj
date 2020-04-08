@@ -1,6 +1,4 @@
-package com.design.manage.common;
-
-import com.design.manage.common.Enums.ResultEnum;
+package com.design.common;
 
 public class Result {
     private Integer code;

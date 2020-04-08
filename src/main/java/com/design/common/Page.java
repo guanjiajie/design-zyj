@@ -1,4 +1,4 @@
-package com.design.manage.common;
+package com.design.common;
 
 import java.io.Serializable;
 import java.math.BigInteger;

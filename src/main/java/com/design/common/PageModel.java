@@ -1,7 +1,7 @@
-package com.design.manage.common;
+package com.design.common;
 
 
-import com.design.manage.utils.EmptyUtil;
+import com.design.utils.EmptyUtil;
 
 import java.io.Serializable;
 import java.math.BigInteger;

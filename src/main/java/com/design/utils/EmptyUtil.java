@@ -1,4 +1,4 @@
-package com.design.manage.utils;
+package com.design.utils;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;

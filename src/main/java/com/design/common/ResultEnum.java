@@ -1,4 +1,4 @@
-package com.design.manage.common.Enums;
+package com.design.common;
 
 public enum ResultEnum {
     UNKONW_ERROR(-1, "未知错误"),

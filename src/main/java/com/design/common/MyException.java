@@ -1,4 +1,4 @@
-package com.design.manage.common;
+package com.design.common;
 
 public class MyException extends RuntimeException {
     private Integer code;
