@@ -1,7 +1,9 @@
 package com.design.entity;
 
 
-public class TStaff {
+import com.design.common.PageModel;
+
+public class TStaff extends PageModel {
 
   private int id;
   private String name;

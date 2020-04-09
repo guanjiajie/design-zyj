@@ -1,7 +1,9 @@
 package com.design.entity;
 
 
-public class TReport {
+import com.design.common.PageModel;
+
+public class TReport extends PageModel {
 
   private int id;
   private String type;

@@ -1,7 +1,9 @@
 package com.design.entity;
 
 
-public class TDepartment {
+import com.design.common.PageModel;
+
+public class TDepartment extends PageModel {
 
   private int rowid;
   private String resourceId;

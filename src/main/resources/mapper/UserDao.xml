@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.design.dao.UserDao">
+
+    <select id="getLoginUser" parameterType="com.design.entity.TLoginuser" resultType="com.design.entity.TLoginuser">
+        select *
+        from db_design.t_loginuser
+        where 1=1
+        and username=#{username}
+    </select>
+</mapper>

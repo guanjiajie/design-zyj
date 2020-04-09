@@ -1,7 +1,9 @@
 package com.design.entity;
 
 
-public class TStatistics {
+import com.design.common.PageModel;
+
+public class TStatistics extends PageModel {
 
   private int rowid;
   private String year;

@@ -1,7 +1,9 @@
 package com.design.entity;
 
 
-public class TPlan {
+import com.design.common.PageModel;
+
+public class TPlan extends PageModel {
 
   private int id;
   private String date;

@@ -1,7 +1,9 @@
 package com.design.entity;
 
 
-public class TArticle {
+import com.design.common.PageModel;
+
+public class TArticle extends PageModel {
 
   private int id;
   private String title;

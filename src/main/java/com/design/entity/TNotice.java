@@ -1,7 +1,9 @@
 package com.design.entity;
 
 
-public class TNotice {
+import com.design.common.PageModel;
+
+public class TNotice extends PageModel {
 
   private int id;
   private String status;

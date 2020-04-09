@@ -1,7 +1,9 @@
 package com.design.entity;
 
 
-public class TLoginuser {
+import com.design.common.PageModel;
+
+public class TLoginuser extends PageModel {
 
   private int id;
   private String username;

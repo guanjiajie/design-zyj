@@ -1,7 +1,9 @@
 package com.design.entity;
 
 
-public class TProject {
+import com.design.common.PageModel;
+
+public class TProject extends PageModel {
 
   private int id;
   private String projectName;
