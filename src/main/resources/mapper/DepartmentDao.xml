@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.design.dao.DepartmentDao">
+    <resultMap id="department1" type="com.design.entity.TDepartment">
+        <result column="resource_id_p1" property="resourceId"/>
+        <result column="department_p1" property="department"/>
+        <collection property="departments" ofType="com.design.entity.TDepartment" resultMap="department2"/>
+    </resultMap>
+
+    <resultMap id="department2" type="com.design.entity.TDepartment">
+        <result column="resource_id_p2" property="resourceId"/>
+        <result column="department_p2" property="department"/>
+        <result column="parent_id" property="parentId"/>
+    </resultMap>
+
+    <select id="getAllDepartment" parameterType="com.design.entity.TDepartment" resultMap="department1">
+        select t1.resource_id as 'resource_id_p1',
+               t1.department  as 'department_p1',
+               t2.resource_id as 'resource_id_p2',
+               t2.department  as 'department_p2',
+               t2.parent_id   as 'parent_id'
+        from db_design.t_department t1
+        left join db_design.t_department t2 on t1.resource_id = t2.parent_id
+        where t1.type = 'type10'
+    </select>
+</mapper>

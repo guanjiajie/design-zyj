@@ -43,3 +43,124 @@ response: {
           }
 
 --------------------------------------------
+查询所有部门(结构树)
+/department/getAllDepartment
+request:
+response: {
+              "code": 100,
+              "msg": "成功！",
+              "data": [
+                  {
+                      "returned": 0,
+                      "dateStartSuffix": " 00:00:00",
+                      "dateEndSuffix": " 23:59:59",
+                      "rowid": 0,
+                      "resourceId": "P001",
+                      "department": "产品中心",
+                      "departments": [
+                          {
+                              "returned": 0,
+                              "dateStartSuffix": " 00:00:00",
+                              "dateEndSuffix": " 23:59:59",
+                              "rowid": 0,
+                              "resourceId": "P005",
+                              "parentId": "P001",
+                              "department": "产品组"
+                          },
+                          {
+                              "returned": 0,
+                              "dateStartSuffix": " 00:00:00",
+                              "dateEndSuffix": " 23:59:59",
+                              "rowid": 0,
+                              "resourceId": "P006",
+                              "parentId": "P001",
+                              "department": "开发组"
+                          }
+                      ]
+                  },
+                  {
+                      "returned": 0,
+                      "dateStartSuffix": " 00:00:00",
+                      "dateEndSuffix": " 23:59:59",
+                      "rowid": 0,
+                      "resourceId": "P002",
+                      "department": "运营管理部",
+                      "departments": [
+                          {
+                              "returned": 0,
+                              "dateStartSuffix": " 00:00:00",
+                              "dateEndSuffix": " 23:59:59",
+                              "rowid": 0,
+                              "resourceId": "P007",
+                              "parentId": "P002",
+                              "department": "行政人事部"
+                          },
+                          {
+                              "returned": 0,
+                              "dateStartSuffix": " 00:00:00",
+                              "dateEndSuffix": " 23:59:59",
+                              "rowid": 0,
+                              "resourceId": "P008",
+                              "parentId": "P002",
+                              "department": "财务部"
+                          },
+                          {
+                              "returned": 0,
+                              "dateStartSuffix": " 00:00:00",
+                              "dateEndSuffix": " 23:59:59",
+                              "rowid": 0,
+                              "resourceId": "P009",
+                              "parentId": "P002",
+                              "department": "项目管理部"
+                          }
+                      ]
+                  },
+                  {
+                      "returned": 0,
+                      "dateStartSuffix": " 00:00:00",
+                      "dateEndSuffix": " 23:59:59",
+                      "rowid": 0,
+                      "resourceId": "P003",
+                      "department": "数据控制中心",
+                      "departments": [
+                          {
+                              "returned": 0,
+                              "dateStartSuffix": " 00:00:00",
+                              "dateEndSuffix": " 23:59:59",
+                              "rowid": 0,
+                              "resourceId": "P010",
+                              "parentId": "P003",
+                              "department": "数据部"
+                          }
+                      ]
+                  },
+                  {
+                      "returned": 0,
+                      "dateStartSuffix": " 00:00:00",
+                      "dateEndSuffix": " 23:59:59",
+                      "rowid": 0,
+                      "resourceId": "P004",
+                      "department": "市场部",
+                      "departments": [
+                          {
+                              "returned": 0,
+                              "dateStartSuffix": " 00:00:00",
+                              "dateEndSuffix": " 23:59:59",
+                              "rowid": 0,
+                              "resourceId": "P011",
+                              "parentId": "P004",
+                              "department": "市场开发部"
+                          },
+                          {
+                              "returned": 0,
+                              "dateStartSuffix": " 00:00:00",
+                              "dateEndSuffix": " 23:59:59",
+                              "rowid": 0,
+                              "resourceId": "P012",
+                              "parentId": "P004",
+                              "department": "市场宣传部"
+                          }
+                      ]
+                  }
+              ]
+          }
