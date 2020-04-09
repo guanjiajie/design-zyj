@@ -5,17 +5,13 @@ import com.design.common.Result;
 import com.design.common.ResultEnum;
 import com.design.entity.TLoginuser;
 import com.design.service.IUserService;
-import com.design.utils.EmptyUtil;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-
-import javax.servlet.http.HttpServletRequest;
 
 /**
  * @Author:
@@ -32,7 +28,7 @@ public class UserController {
 
 
     /**
-     * @author: guanjiajie
+     * @author: 
      * @description: 
      * @date: 2020/4/8 15:48
      * @param tLoginuser
