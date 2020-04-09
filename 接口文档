@@ -1,0 +1,45 @@
+登录 /user/login
+request : "username":"xxx"
+          "password":"xxx"
+response: "code":'"100"
+          "msg":"成功"
+          "data":null
+
+---------------------
+查询所有员工(查询按钮也是)
+/staff/getAllStaff
+request: {
+         	"name":"" (为空时查询所有)
+         }
+response: {
+              "code": 100,
+              "msg": "成功！",
+              "data": [
+                  {
+                      "returned": 0,
+                      "dateStartSuffix": " 00:00:00",
+                      "dateEndSuffix": " 23:59:59",
+                      "id": 1,
+                      "name": "刘锦云",
+                      "email": "678687688@qq.com",
+                      "phone": "585875785",
+                      "address": "",
+                      "birth": "2020-04-09",
+                      "department": "创新部",
+                      "sex": "女"
+                  },
+                  {
+                      "returned": 0,
+                      "dateStartSuffix": " 00:00:00",
+                      "dateEndSuffix": " 23:59:59",
+                      "id": 2,
+                      "name": "朱军",
+                      "email": "2212394@ecdfda.com",
+                      "phone": "297818339",
+                      "department": "研发部",
+                      "sex": "男"
+                  }
+              ]
+          }
+
+--------------------------------------------
