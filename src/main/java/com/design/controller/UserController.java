@@ -8,10 +8,7 @@ import com.design.service.IUserService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @Author:
@@ -19,6 +16,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  */
 @Controller
 @RequestMapping("/user")
+@CrossOrigin
 public class UserController {
 
     @Autowired
@@ -36,7 +34,7 @@ public class UserController {
     */
     @PostMapping("/login")
     @ResponseBody
-    public Result login(@RequestBody TLoginuser tLoginuser){
+    public Result login( TLoginuser tLoginuser){
         try {
             return Result.success(iUserService.login(tLoginuser));
         } catch (MyException me){
