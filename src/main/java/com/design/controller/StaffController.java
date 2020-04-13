@@ -25,7 +25,7 @@ public class StaffController {
     private Logger logger = Logger.getLogger(this.getClass());
 
     @PostMapping("/getAllStaff")
-    public Result getAllStaff(@RequestBody TStaff tStaff){
+    public Result getAllStaff( TStaff tStaff){
         try {
             return Result.success(iStaffService.getAllStaff(tStaff));
         } catch (MyException me){

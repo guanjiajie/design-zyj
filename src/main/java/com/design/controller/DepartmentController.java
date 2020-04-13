@@ -25,7 +25,7 @@ public class DepartmentController {
     private Logger logger = Logger.getLogger(this.getClass());
 
     @PostMapping("/getAllDepartment")
-    public Result getAllDepartment(@RequestBody TDepartment tDepartment){
+    public Result getAllDepartment( TDepartment tDepartment){
         try {
             return Result.success(iDepartmentService.getAllDepartment(tDepartment));
         } catch (MyException me){

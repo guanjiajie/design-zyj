@@ -36,7 +36,7 @@ public class UserController {
     */
     @PostMapping("/login")
     @ResponseBody
-    public Result login(@RequestBody TLoginuser tLoginuser){
+    public Result login( TLoginuser tLoginuser){
         try {
             return Result.success(iUserService.login(tLoginuser));
         } catch (MyException me){
