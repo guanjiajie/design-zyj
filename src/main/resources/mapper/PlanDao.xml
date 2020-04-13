@@ -6,4 +6,17 @@
         from db_design.t_plan
         where 1=1
     </select>
+
+    <insert id="insertPlan" parameterType="com.design.entity.TPlan" >
+        insert into db_design.t_plan
+        (
+          plan,
+          date,
+          status
+        )values (
+                 #{plan},
+                 #{date},
+                 '未完成'
+        )
+    </insert>
 </mapper>

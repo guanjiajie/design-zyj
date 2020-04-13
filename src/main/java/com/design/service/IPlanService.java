@@ -11,4 +11,5 @@ import java.util.List;
 public interface IPlanService {
 
     List<TPlan> getAllPlan();
+    boolean insertPlan(TPlan tPlan);
 }

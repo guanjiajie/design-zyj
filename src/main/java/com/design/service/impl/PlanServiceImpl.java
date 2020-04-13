@@ -1,5 +1,7 @@
 package com.design.service.impl;
 
+import com.design.common.MyException;
+import com.design.common.ResultEnum;
 import com.design.dao.PlanDao;
 import com.design.entity.TPlan;
 import com.design.service.IPlanService;
@@ -24,5 +26,14 @@ public class PlanServiceImpl implements IPlanService {
     public List<TPlan> getAllPlan() {
         List<TPlan> list = planDao.getAllPlan();
         return list;
+    }
+
+    @Override
+    public boolean insertPlan(TPlan tPlan) {
+        int ret = planDao.insertPlan(tPlan);
+        if (ret < 1){
+            throw new MyException(ResultEnum.ERROR.getCode(),"新增失败");
+        }
+        return true;
     }
 }

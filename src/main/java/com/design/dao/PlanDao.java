@@ -13,4 +13,6 @@ import java.util.List;
 public interface PlanDao {
 
     List<TPlan> getAllPlan();
+
+    int insertPlan(TPlan tPlan);
 }
