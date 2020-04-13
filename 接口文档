@@ -166,3 +166,31 @@ response: {
           }
 
 --------------------------------------
+获取所有工作计划
+request:
+response:{
+             "code": 100,
+             "msg": "成功！",
+             "data": [
+                 {
+                     "returned": 0,
+                     "dateStartSuffix": " 00:00:00",
+                     "dateEndSuffix": " 23:59:59",
+                     "id": 1,
+                     "date": "2020-04-13",
+                     "plan": "工作计划1",
+                     "status": "未完成"
+                 },
+                 {
+                     "returned": 0,
+                     "dateStartSuffix": " 00:00:00",
+                     "dateEndSuffix": " 23:59:59",
+                     "id": 2,
+                     "date": "2020-04-14",
+                     "plan": "工作计划2",
+                     "status": "已完成"
+                 }
+             ]
+         }
+
+----------------------------------------------
