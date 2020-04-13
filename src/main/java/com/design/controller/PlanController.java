@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.*;
  * @Date: 2020/4/13 16:41
  */
 @RestController
-@RequestMapping("/plan")
 @CrossOrigin
+@RequestMapping("/plan")
 public class PlanController {
 
     @Autowired
