@@ -15,4 +15,5 @@ public interface PlanDao {
     List<TPlan> getAllPlan();
 
     int insertPlan(TPlan tPlan);
+    int updatePlanStatus(TPlan tPlan);
 }

@@ -12,4 +12,5 @@ public interface IPlanService {
 
     List<TPlan> getAllPlan();
     boolean insertPlan(TPlan tPlan);
+    boolean updatePlanStatus(TPlan tPlan);
 }

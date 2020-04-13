@@ -9,7 +9,15 @@ public class TPlan extends PageModel {
   private String date;
   private String plan;
   private String status;
+  private String mark;
 
+  public String getMark() {
+    return mark;
+  }
+
+  public void setMark(String mark) {
+    this.mark = mark;
+  }
 
   public int getId() {
     return id;

@@ -36,4 +36,20 @@ public class PlanServiceImpl implements IPlanService {
         }
         return true;
     }
+
+    @Override
+    public boolean updatePlanStatus(TPlan tPlan) {
+        //完成
+        if ("0".equals(tPlan.getMark())){
+            tPlan.setStatus("已完成");
+        }else { //未完成
+            tPlan.setStatus("未完成");
+        }
+
+        int ret = planDao.updatePlanStatus(tPlan);
+        if (ret < 1){
+            throw new MyException(ResultEnum.ERROR.getCode(),"修改失败");
+        }
+        return true;
+    }
 }

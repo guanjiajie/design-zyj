@@ -19,4 +19,13 @@
                  '未完成'
         )
     </insert>
+
+    <update id="updatePlanStatus" parameterType="com.design.entity.TPlan">
+        update db_design.t_plan
+        <set>
+            status=#{status},
+        </set>
+        where 1=1
+        and id=#{id}
+    </update>
 </mapper>

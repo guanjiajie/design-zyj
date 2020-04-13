@@ -8,6 +8,7 @@ import com.design.service.IPlanService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -43,6 +44,22 @@ public class PlanController {
         try {
             iPlanService.insertPlan(tPlan);
             return Result.setSuccessMsg("新增成功");
+        } catch (MyException me){
+            me.printStackTrace();
+            logger.error(ResultEnum.ERROR.getCode(),me);
+            return Result.error(ResultEnum.ERROR.getCode(),ResultEnum.ERROR.getMsg());
+        } catch (Exception e){
+            e.printStackTrace();
+            logger.error(ResultEnum.UNKONW_ERROR.getCode(),e);
+            return Result.error(ResultEnum.UNKONW_ERROR.getCode(),ResultEnum.UNKONW_ERROR.getMsg());
+        }
+    }
+
+    @PostMapping("/updatePlanStatus")
+    public Result updatePlanStatus(@RequestBody  TPlan tPlan){
+        try {
+            iPlanService.updatePlanStatus(tPlan);
+            return Result.setSuccessMsg("更新成功");
         } catch (MyException me){
             me.printStackTrace();
             logger.error(ResultEnum.ERROR.getCode(),me);
