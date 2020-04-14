@@ -54,7 +54,7 @@ public class PlanController {
     }
 
     @PostMapping("/updatePlanStatus")
-    public Result updatePlanStatus(@RequestBody  TPlan tPlan){
+    public Result updatePlanStatus( TPlan tPlan){
         try {
             iPlanService.updatePlanStatus(tPlan);
             return Result.setSuccessMsg("更新成功");
