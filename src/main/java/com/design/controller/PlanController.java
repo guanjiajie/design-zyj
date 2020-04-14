@@ -7,16 +7,14 @@ import com.design.entity.TPlan;
 import com.design.service.IPlanService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @Author: guanjiajie
  * @Date: 2020/4/13 16:41
  */
 @RestController
+@CrossOrigin
 @RequestMapping("/plan")
 public class PlanController {
 
