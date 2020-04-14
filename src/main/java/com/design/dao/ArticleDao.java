@@ -1,6 +1,7 @@
 package com.design.dao;
 
 import com.design.entity.TArticle;
+import com.design.entity.TNotice;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -13,4 +14,6 @@ import java.util.List;
 public interface ArticleDao {
 
     List<TArticle> getAllArticle();
+
+    List<TNotice> getAllNotice();
 }

@@ -245,3 +245,50 @@ response : {
                ]
            }
 -------------------------------------------------
+获取所有通知
+/article/getAllNotice
+request:
+response: {
+              "code": 100,
+              "msg": "成功！",
+              "data": {
+                  "returned": 0,
+                  "dateStartSuffix": " 00:00:00",
+                  "dateEndSuffix": " 23:59:59",
+                  "id": 0,
+                  "notices1": [
+                      {
+                          "returned": 0,
+                          "dateStartSuffix": " 00:00:00",
+                          "dateEndSuffix": " 23:59:59",
+                          "id": 1,
+                          "status": "1",
+                          "noticeTitle": "企业通知",
+                          "noticeContent": "企业通知啊"
+                      }
+                  ],
+                  "notices2": [
+                      {
+                          "returned": 0,
+                          "dateStartSuffix": " 00:00:00",
+                          "dateEndSuffix": " 23:59:59",
+                          "id": 2,
+                          "status": "2",
+                          "noticeTitle": "私信",
+                          "noticeContent": "私信啊"
+                      }
+                  ],
+                  "notices3": [
+                      {
+                          "returned": 0,
+                          "dateStartSuffix": " 00:00:00",
+                          "dateEndSuffix": " 23:59:59",
+                          "id": 3,
+                          "status": "3",
+                          "noticeTitle": "系统通知",
+                          "noticeContent": "系统通知啊"
+                      }
+                  ]
+              }
+          }
+ ------------------------------------------------------

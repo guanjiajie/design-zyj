@@ -1,6 +1,7 @@
 package com.design.service;
 
 import com.design.entity.TArticle;
+import com.design.entity.TNotice;
 
 import java.util.List;
 
@@ -11,4 +12,5 @@ import java.util.List;
 public interface IArticleService {
 
     List<TArticle> getAllArticle();
+    TNotice getAllNotice();
 }

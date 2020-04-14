@@ -6,4 +6,11 @@
         from db_design.t_article
         where 1=1
     </select>
+
+    <select id="getAllNotice" parameterType="com.design.entity.TNotice" resultType="com.design.entity.TNotice">
+        select *
+        from db_design.t_notice
+        where 1=1
+
+    </select>
 </mapper>

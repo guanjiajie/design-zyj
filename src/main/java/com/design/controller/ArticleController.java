@@ -4,6 +4,7 @@ import com.design.common.MyException;
 import com.design.common.Result;
 import com.design.common.ResultEnum;
 import com.design.entity.TArticle;
+import com.design.entity.TNotice;
 import com.design.service.IArticleService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,4 +40,20 @@ public class ArticleController {
             return Result.error(ResultEnum.UNKONW_ERROR.getCode(),ResultEnum.UNKONW_ERROR.getMsg());
         }
     }
+
+    @PostMapping("/getAllNotice")
+    public Result getAllNotice(TNotice tNotice){
+        try {
+            return Result.success(iArticleService.getAllNotice());
+        } catch (MyException me){
+            me.printStackTrace();
+            logger.error(ResultEnum.ERROR.getCode(),me);
+            return Result.error(ResultEnum.ERROR.getCode(),ResultEnum.ERROR.getMsg());
+        } catch (Exception e){
+            e.printStackTrace();
+            logger.error(ResultEnum.UNKONW_ERROR.getCode(),e);
+            return Result.error(ResultEnum.UNKONW_ERROR.getCode(),ResultEnum.UNKONW_ERROR.getMsg());
+        }
+    }
+
 }
