@@ -1,0 +1,14 @@
+package com.design.service;
+
+import com.design.entity.TArticle;
+
+import java.util.List;
+
+/**
+ * @Author: guanjiajie
+ * @Date: 2020/4/14 17:55
+ */
+public interface IArticleService {
+
+    List<TArticle> getAllArticle();
+}

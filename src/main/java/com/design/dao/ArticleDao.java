@@ -1,0 +1,16 @@
+package com.design.dao;
+
+import com.design.entity.TArticle;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+
+/**
+ * @Author: guanjiajie
+ * @Date: 2020/4/14 17:52
+ */
+@Repository
+public interface ArticleDao {
+
+    List<TArticle> getAllArticle();
+}

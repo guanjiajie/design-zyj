@@ -219,3 +219,29 @@ response: {
               "msg": "更新成功"
           }
 -----------------------------------
+获取新闻
+/article/getAllArticle
+request
+response : {
+               "code": 100,
+               "msg": "成功！",
+               "data": [
+                   {
+                       "returned": 0,
+                       "dateStartSuffix": " 00:00:00",
+                       "dateEndSuffix": " 23:59:59",
+                       "id": 1,
+                       "title": "新闻1",
+                       "content": "你好啊"
+                   },
+                   {
+                       "returned": 0,
+                       "dateStartSuffix": " 00:00:00",
+                       "dateEndSuffix": " 23:59:59",
+                       "id": 2,
+                       "title": "新闻2",
+                       "content": "不好"
+                   }
+               ]
+           }
+-------------------------------------------------
