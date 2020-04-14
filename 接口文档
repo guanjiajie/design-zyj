@@ -167,6 +167,7 @@ response: {
 
 --------------------------------------
 获取所有工作计划
+/plan/getAllPlan
 request:
 response:{
              "code": 100,
