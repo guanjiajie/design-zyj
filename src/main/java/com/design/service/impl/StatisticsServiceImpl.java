@@ -35,7 +35,7 @@ public class StatisticsServiceImpl implements IStatisticsService {
 
         map.forEach((key,value) -> {
             TStatistics tStatistics = new TStatistics();
-            tStatistics.setYear(key);
+            tStatistics.setYear(key.split("-")[0]);
 
             List<Integer> projectNums = new ArrayList<>(Arrays.asList(0,0,0,0,0,0,0,0,0,0,0,0));
             List<Double> incomes = new ArrayList<>(Arrays.asList(0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0));
