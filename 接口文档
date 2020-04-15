@@ -401,3 +401,37 @@ response: {
                   }
               ]
           }
+
+------------------------------------
+获取项目
+/project/getAllProjects
+request
+response: {
+              "code": 100,
+              "msg": "成功！",
+              "data": [
+                  {
+                      "returned": 0,
+                      "dateStartSuffix": " 00:00:00",
+                      "dateEndSuffix": " 23:59:59",
+                      "id": 1,
+                      "projectName": "XXX学生管理系统",
+                      "startTime": "2020-04-15 17:57:37",
+                      "endTime": "2020-04-30 17:57:42",
+                      "chargePerson": "朱一娇",
+                      "speed": "1"
+                  },
+                  {
+                      "returned": 0,
+                      "dateStartSuffix": " 00:00:00",
+                      "dateEndSuffix": " 23:59:59",
+                      "id": 2,
+                      "projectName": "XXX小说站",
+                      "startTime": "2020-04-07 17:58:54",
+                      "endTime": "2020-04-23 17:58:59",
+                      "chargePerson": "官佳杰",
+                      "speed": "2"
+                  }
+              ]
+          }
+-----------------------------------------------------
