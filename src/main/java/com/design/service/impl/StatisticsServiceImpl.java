@@ -38,15 +38,24 @@ public class StatisticsServiceImpl implements IStatisticsService {
             tStatistics.setYear(key.split("-")[0]);
 
             List<Integer> projectNums = new ArrayList<>(Arrays.asList(0,0,0,0,0,0,0,0,0,0,0,0));
+            List<Integer> personNums = new ArrayList<>(Arrays.asList(0,0,0,0,0,0,0,0,0,0,0,0));
             List<Double> incomes = new ArrayList<>(Arrays.asList(0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0));
+            List<Double> expenditures = new ArrayList<>(Arrays.asList(0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0));
 
             value.stream().forEach(e -> {
                 for (int month : months){
                     if (month == e.getMonth()){
                         projectNums.remove(month-1);
                         projectNums.add(month-1,e.getMonth());
+
                         incomes.remove(month-1);
                         incomes.add(month-1,e.getIncome());
+
+                        personNums.remove(month-1);
+                        personNums.add(month-1,e.getPersonNum());
+
+                        expenditures.remove(month-1);
+                        expenditures.add(month-1,e.getExpenditure());
                     }
                 }
             });
@@ -54,6 +63,8 @@ public class StatisticsServiceImpl implements IStatisticsService {
             tStatistics.setMonths(months);
             tStatistics.setProjectNums(projectNums);
             tStatistics.setIncomes(incomes);
+            tStatistics.setPersonNums(personNums);
+            tStatistics.setExpenditures(expenditures);
             result.add(tStatistics);
         });
 

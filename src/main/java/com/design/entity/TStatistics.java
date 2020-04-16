@@ -11,11 +11,37 @@ public class TStatistics {
   private int projectNum;
   private int personNum;
   private double income;
-  private String expenditure;
+  private double expenditure;
 
   private List<Integer> months;
   private List<Integer> projectNums;
   private List<Double> incomes;
+  private List<Integer> personNums;
+  private List<Double> expenditures;
+
+  public double getExpenditure() {
+    return expenditure;
+  }
+
+  public void setExpenditure(double expenditure) {
+    this.expenditure = expenditure;
+  }
+
+  public List<Integer> getPersonNums() {
+    return personNums;
+  }
+
+  public void setPersonNums(List<Integer> personNums) {
+    this.personNums = personNums;
+  }
+
+  public List<Double> getExpenditures() {
+    return expenditures;
+  }
+
+  public void setExpenditures(List<Double> expenditures) {
+    this.expenditures = expenditures;
+  }
 
   public List<Integer> getMonths() {
     return months;
@@ -94,12 +120,5 @@ public class TStatistics {
   }
 
 
-  public String getExpenditure() {
-    return expenditure;
-  }
-
-  public void setExpenditure(String expenditure) {
-    this.expenditure = expenditure;
-  }
 
 }
