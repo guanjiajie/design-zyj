@@ -13,4 +13,7 @@ import java.util.List;
 public interface ProjectDao {
 
     List<TProject> getAllProjects();
+
+    int addProject(TProject tProject);
+    int deleteProject(TProject tProject);
 }

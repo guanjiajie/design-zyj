@@ -7,4 +7,24 @@
         where 1=1
 
     </select>
+
+    <insert id="addProject" parameterType="com.design.entity.TProject">
+        insert into db_design.t_project
+        ( project_name, start_time, end_time, charge_person, speed, investor )
+        values (
+                #{projectName},
+                #{startTime},
+                #{endTime},
+                #{chargePerson},
+                #{speed},
+                #{investor}
+                       )
+    </insert>
+
+    <delete id="deleteProject" parameterType="com.design.entity.TProject">
+        delete
+        from db_design.t_project
+        where 1=1
+        and id=#{id}
+    </delete>
 </mapper>

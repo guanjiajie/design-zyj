@@ -1,5 +1,7 @@
 package com.design.service.impl;
 
+import com.design.common.MyException;
+import com.design.common.ResultEnum;
 import com.design.dao.ProjectDao;
 import com.design.entity.TProject;
 import com.design.service.IProjectService;
@@ -25,5 +27,23 @@ public class ProjectServiceImpl implements IProjectService {
 
         List<TProject> list = projectDao.getAllProjects();
         return list;
+    }
+
+    @Override
+    public boolean addProject(TProject tProject) {
+        int ret = projectDao.addProject(tProject);
+        if (ret < 1){
+            throw new MyException(ResultEnum.ERROR.getCode(),"添加失败");
+        }
+        return true;
+    }
+
+    @Override
+    public boolean deleteProject(TProject tProject) {
+        int ret = projectDao.deleteProject(tProject);
+        if (ret < 1){
+            throw new MyException(ResultEnum.ERROR.getCode(),"删除失败");
+        }
+        return false;
     }
 }

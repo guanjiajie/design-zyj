@@ -11,4 +11,7 @@ import java.util.List;
 public interface IProjectService {
 
     List<TProject> getAllProjects();
+
+    boolean addProject(TProject tProject);
+    boolean deleteProject(TProject tProject);
 }

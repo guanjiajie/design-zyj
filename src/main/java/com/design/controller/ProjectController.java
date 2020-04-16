@@ -7,10 +7,7 @@ import com.design.entity.TProject;
 import com.design.service.IProjectService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @Author: guanjiajie
@@ -29,6 +26,38 @@ public class ProjectController {
     public Result getAllProjects(TProject tProject){
         try {
             return Result.success(iProjectService.getAllProjects());
+        } catch (MyException me){
+            me.printStackTrace();
+            logger.error(ResultEnum.ERROR.getCode(),me);
+            return Result.error(ResultEnum.ERROR.getCode(),ResultEnum.ERROR.getMsg());
+        } catch (Exception e){
+            e.printStackTrace();
+            logger.error(ResultEnum.UNKONW_ERROR.getCode(),e);
+            return Result.error(ResultEnum.UNKONW_ERROR.getCode(),ResultEnum.UNKONW_ERROR.getMsg());
+        }
+    }
+
+    @PostMapping("/addProject")
+    public Result addProject( TProject tProject){
+        try {
+            iProjectService.addProject(tProject);
+            return Result.success();
+        } catch (MyException me){
+            me.printStackTrace();
+            logger.error(ResultEnum.ERROR.getCode(),me);
+            return Result.error(ResultEnum.ERROR.getCode(),ResultEnum.ERROR.getMsg());
+        } catch (Exception e){
+            e.printStackTrace();
+            logger.error(ResultEnum.UNKONW_ERROR.getCode(),e);
+            return Result.error(ResultEnum.UNKONW_ERROR.getCode(),ResultEnum.UNKONW_ERROR.getMsg());
+        }
+    }
+
+    @PostMapping("/deleteProject")
+    public Result deleteProject( TProject tProject){
+        try {
+            iProjectService.deleteProject(tProject);
+            return Result.success();
         } catch (MyException me){
             me.printStackTrace();
             logger.error(ResultEnum.ERROR.getCode(),me);
