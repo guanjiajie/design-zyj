@@ -435,3 +435,28 @@ response: {
               ]
           }
 -----------------------------------------------------
+添加项目
+/project/addProject
+request: {
+         	"projectName":"管理系统的实现",
+         	"startTime":"2020-04-16",
+         	"endTime":"2020-04-30",
+         	"chargePerson":"朱一娇",
+         	"speed":"0"
+         }
+response: {
+              "code": 100,
+              "msg": "成功！"
+          }
+----------------------------------------------------
+删除项目
+/project/deleteProject
+request: {
+         	"id":"3"
+         }
+response: {
+              "code": 100,
+              "msg": "成功！"
+
+          }
+-------------------------------------
