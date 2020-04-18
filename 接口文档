@@ -460,3 +460,17 @@ response: {
 
           }
 -------------------------------------
+修改项目
+/project/updateProject
+request: {
+         	"id":"4",
+         	"projectName":"管理系统",
+         	"startTime":"2020-04-18",
+         	"endTime":"2020-04-20",
+         	"chargePerson":"官",
+         	"speed":"10"
+         }
+response : {
+               "code": 100,
+               "msg": "成功！"
+           }

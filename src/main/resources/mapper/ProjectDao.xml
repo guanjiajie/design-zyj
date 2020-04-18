@@ -27,4 +27,27 @@
         where 1=1
         and id=#{id}
     </delete>
+
+    <update id="updateProject" parameterType="com.design.entity.TProject">
+        update db_design.t_project
+        <set>
+            <if test="projectName != null and projectName != ''">
+                project_name=#{projectName},
+            </if>
+            <if test="startTime != null and startTime != ''">
+                start_time=#{startTime},
+            </if>
+            <if test="endTime != null and endTime != ''">
+                end_time=#{endTime},
+            </if>
+            <if test="chargePerson != null and chargePerson != ''">
+                charge_person=#{chargePerson},
+            </if>
+            <if test="speed != null and speed != ''">
+                speed=#{speed},
+            </if>
+        </set>
+        where 1=1
+        and id=#{id}
+    </update>
 </mapper>

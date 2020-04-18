@@ -14,4 +14,5 @@ public interface IProjectService {
 
     boolean addProject(TProject tProject);
     boolean deleteProject(TProject tProject);
+    boolean updateProject(TProject tProject);
 }

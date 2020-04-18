@@ -46,4 +46,13 @@ public class ProjectServiceImpl implements IProjectService {
         }
         return false;
     }
+
+    @Override
+    public boolean updateProject(TProject tProject) {
+        int ret = projectDao.updateProject(tProject);
+        if (ret < 1){
+            throw new MyException(ResultEnum.ERROR.getCode(),"修改失败");
+        }
+        return true;
+    }
 }

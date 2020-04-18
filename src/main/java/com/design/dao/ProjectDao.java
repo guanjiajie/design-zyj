@@ -16,4 +16,6 @@ public interface ProjectDao {
 
     int addProject(TProject tProject);
     int deleteProject(TProject tProject);
+
+    int updateProject(TProject tProject);
 }
