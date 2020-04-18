@@ -485,3 +485,43 @@ response : {
                "msg": "删除成功"
            }
 -----------------------
+周工作统计
+/personJob/getPersonJobList
+request:{
+            "page":1
+        }
+response :{
+              "code": 100,
+              "msg": "成功！",
+              "data": {
+                  "data": [
+                      {
+                          "returned": 0,
+                          "dateStartSuffix": " 00:00:00",
+                          "dateEndSuffix": " 23:59:59",
+                          "id": "1",
+                          "createName": "官佳杰",
+                          "createTime": "2020-04-18 14:59:37",
+                          "startTime": "2020-04-13 14:59:53",
+                          "endTime": "2020-04-19 14:59:57",
+                          "workTime": "5",
+                          "workContent": "工作内容"
+                      },
+                      {
+                          "returned": 0,
+                          "dateStartSuffix": " 00:00:00",
+                          "dateEndSuffix": " 23:59:59",
+                          "id": "2",
+                          "createName": "朱一娇",
+                          "createTime": "2020-04-18 15:00:07",
+                          "startTime": "2020-04-13 15:00:16",
+                          "endTime": "2020-04-19 15:00:19",
+                          "workTime": "5",
+                          "workContent": "工作内容2"
+                      }
+                  ],
+                  "total": 2,
+                  "totalPages": 1
+              }
+          }
+--------------------------------------

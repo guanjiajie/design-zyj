@@ -11,17 +11,17 @@ public class Page<T> implements Serializable{
     private String packData;    // 压缩后得json数据
     private BigInteger total;       //总条数
     private Integer totalPages;     //总页数
-    private int page;   //当前页
+//    private int page;   //当前页
 
     private String nowDate; // 数据库当前时间
 
-    public int getPage() {
-        return page;
-    }
-
-    public void setPage(int page) {
-        this.page = page;
-    }
+//    public int getPage() {
+//        return page;
+//    }
+//
+//    public void setPage(int page) {
+//        this.page = page;
+//    }
 
     public List<T> getData() {
         return data;
