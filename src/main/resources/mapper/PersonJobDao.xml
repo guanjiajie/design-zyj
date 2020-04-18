@@ -11,7 +11,6 @@
         select *
         from db_design.t_person_job
         where 1=1
-        limit #{start},#{length}
     </select>
     
     <insert id="addPersonJob" parameterType="com.design.entity.TPersonJob">

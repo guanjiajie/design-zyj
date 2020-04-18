@@ -32,7 +32,7 @@ public class PersonJobServiceImpl implements IPersonJobService {
 
         Page<TPersonJob> page = new Page<>();
         page.setTotal(count);
-        page.setTotalPages(tPersonJob.getTotalPages());
+//        page.setTotalPages(tPersonJob.getTotalPages());
         page.setData(list);
         return page;
     }
