@@ -525,3 +525,26 @@ response :{
               }
           }
 --------------------------------------
+添加新闻
+/article/addArticle
+request : {
+          	"title":"新闻三",
+          	"content":"今天的新闻",
+          	"publishName":"官佳杰",
+          	"publishTime":"2020-04-18"
+          }
+response: {
+              "code": 100,
+              "msg": "成功！"
+          }
+--------------------------------------
+删除新闻
+/article/deleteArticle
+request : {
+          	"id":"4"
+          }
+response: {
+              "code": 100,
+              "msg": "成功！"
+          }
+---------------------------------------

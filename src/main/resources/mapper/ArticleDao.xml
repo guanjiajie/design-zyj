@@ -13,4 +13,16 @@
         where 1=1
 
     </select>
+
+    <insert id="addArticle" parameterType="com.design.entity.TArticle">
+        insert into db_design.t_article(title,content,publish_name,publish_time)
+        values (#{title},#{content},#{publishName},#{publishTime})
+
+    </insert>
+
+    <delete id="deleteArticle" parameterType="com.design.entity.TArticle">
+        delete from db_design.t_article
+        where 1=1
+        and id=#{id}
+    </delete>
 </mapper>

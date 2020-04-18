@@ -8,7 +8,24 @@ public class TArticle extends PageModel {
   private int id;
   private String title;
   private String content;
+  private String publishName;
+  private String publishTime;
 
+  public String getPublishName() {
+    return publishName;
+  }
+
+  public void setPublishName(String publishName) {
+    this.publishName = publishName;
+  }
+
+  public String getPublishTime() {
+    return publishTime;
+  }
+
+  public void setPublishTime(String publishTime) {
+    this.publishTime = publishTime;
+  }
 
   public int getId() {
     return id;

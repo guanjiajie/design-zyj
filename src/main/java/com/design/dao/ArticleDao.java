@@ -16,4 +16,7 @@ public interface ArticleDao {
     List<TArticle> getAllArticle();
 
     List<TNotice> getAllNotice();
+
+    int addArticle(TArticle tArticle);
+    int deleteArticle(TArticle tArticle);
 }

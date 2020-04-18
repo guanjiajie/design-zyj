@@ -1,5 +1,7 @@
 package com.design.service.impl;
 
+import com.design.common.MyException;
+import com.design.common.ResultEnum;
 import com.design.dao.ArticleDao;
 import com.design.entity.TArticle;
 import com.design.entity.TNotice;
@@ -51,5 +53,23 @@ public class ArticleServiceImpl implements IArticleService {
             });
         }
         return tNotice;
+    }
+
+    @Override
+    public boolean addArticle(TArticle tArticle) {
+        int ret = articleDao.addArticle(tArticle);
+        if (ret < 1){
+            throw new MyException(ResultEnum.ERROR.getCode(),"添加失败");
+        }
+        return true;
+    }
+
+    @Override
+    public boolean deleteArticle(TArticle tArticle) {
+        int ret = articleDao.deleteArticle(tArticle);
+        if (ret < 1){
+            throw new MyException(ResultEnum.ERROR.getCode(),"删除失败");
+        }
+        return true;
     }
 }

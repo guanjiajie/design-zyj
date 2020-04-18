@@ -8,10 +8,7 @@ import com.design.entity.TNotice;
 import com.design.service.IArticleService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @Author: guanjiajie
@@ -45,6 +42,38 @@ public class ArticleController {
     public Result getAllNotice(TNotice tNotice){
         try {
             return Result.success(iArticleService.getAllNotice());
+        } catch (MyException me){
+            me.printStackTrace();
+            logger.error(ResultEnum.ERROR.getCode(),me);
+            return Result.error(ResultEnum.ERROR.getCode(),ResultEnum.ERROR.getMsg());
+        } catch (Exception e){
+            e.printStackTrace();
+            logger.error(ResultEnum.UNKONW_ERROR.getCode(),e);
+            return Result.error(ResultEnum.UNKONW_ERROR.getCode(),ResultEnum.UNKONW_ERROR.getMsg());
+        }
+    }
+
+    @PostMapping("/addArticle")
+    public Result addArticle(@RequestBody  TArticle tArticle){
+        try {
+            iArticleService.addArticle(tArticle);
+            return Result.success();
+        } catch (MyException me){
+            me.printStackTrace();
+            logger.error(ResultEnum.ERROR.getCode(),me);
+            return Result.error(ResultEnum.ERROR.getCode(),ResultEnum.ERROR.getMsg());
+        } catch (Exception e){
+            e.printStackTrace();
+            logger.error(ResultEnum.UNKONW_ERROR.getCode(),e);
+            return Result.error(ResultEnum.UNKONW_ERROR.getCode(),ResultEnum.UNKONW_ERROR.getMsg());
+        }
+    }
+
+    @PostMapping("/deleteArticle")
+    public Result deleteArticle(@RequestBody  TArticle tArticle){
+        try {
+            iArticleService.deleteArticle(tArticle);
+            return Result.success();
         } catch (MyException me){
             me.printStackTrace();
             logger.error(ResultEnum.ERROR.getCode(),me);

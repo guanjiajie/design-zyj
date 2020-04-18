@@ -13,4 +13,7 @@ public interface IArticleService {
 
     List<TArticle> getAllArticle();
     TNotice getAllNotice();
+
+    boolean addArticle(TArticle tArticle);
+    boolean deleteArticle(TArticle tArticle);
 }
