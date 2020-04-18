@@ -54,7 +54,7 @@ public class ArticleController {
     }
 
     @PostMapping("/addArticle")
-    public Result addArticle(@RequestBody  TArticle tArticle){
+    public Result addArticle( TArticle tArticle){
         try {
             iArticleService.addArticle(tArticle);
             return Result.success();
@@ -70,7 +70,7 @@ public class ArticleController {
     }
 
     @PostMapping("/deleteArticle")
-    public Result deleteArticle(@RequestBody  TArticle tArticle){
+    public Result deleteArticle(TArticle tArticle){
         try {
             iArticleService.deleteArticle(tArticle);
             return Result.success();
