@@ -52,4 +52,13 @@ public class PlanServiceImpl implements IPlanService {
         }
         return true;
     }
+
+    @Override
+    public boolean deletePlan(TPlan tPlan) {
+        int ret = planDao.deletePlan(tPlan);
+        if (ret < 1){
+            throw new MyException(ResultEnum.ERROR.getCode(),"删除失败");
+        }
+        return true;
+    }
 }

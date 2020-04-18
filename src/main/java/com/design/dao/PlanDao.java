@@ -16,4 +16,5 @@ public interface PlanDao {
 
     int insertPlan(TPlan tPlan);
     int updatePlanStatus(TPlan tPlan);
+    int deletePlan(TPlan tPlan);
 }

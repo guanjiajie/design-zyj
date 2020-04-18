@@ -69,4 +69,19 @@ public class PlanController {
         }
     }
 
+    @PostMapping("/deletePlan")
+    public Result deletePlan( TPlan tPlan){
+        try {
+            iPlanService.deletePlan(tPlan);
+            return Result.setSuccessMsg("删除成功");
+        } catch (MyException me){
+            me.printStackTrace();
+            logger.error(ResultEnum.ERROR.getCode(),me);
+            return Result.error(ResultEnum.ERROR.getCode(),ResultEnum.ERROR.getMsg());
+        } catch (Exception e){
+            e.printStackTrace();
+            logger.error(ResultEnum.UNKONW_ERROR.getCode(),e);
+            return Result.error(ResultEnum.UNKONW_ERROR.getCode(),ResultEnum.UNKONW_ERROR.getMsg());
+        }
+    }
 }
