@@ -1,6 +1,8 @@
 package com.design.service.impl;
 
+import com.design.common.MyException;
 import com.design.common.Page;
+import com.design.common.ResultEnum;
 import com.design.dao.PersonJobDao;
 import com.design.entity.TPersonJob;
 import com.design.service.IPersonJobService;
@@ -33,5 +35,23 @@ public class PersonJobServiceImpl implements IPersonJobService {
         page.setTotalPages(tPersonJob.getTotalPages());
         page.setData(list);
         return page;
+    }
+
+    @Override
+    public boolean addPersonJob(TPersonJob tPersonJob) {
+        int ret = personJobDao.addPersonJob(tPersonJob);
+        if (ret < 1){
+            throw new MyException(ResultEnum.ERROR.getCode(),"添加失败");
+        }
+        return true;
+    }
+
+    @Override
+    public boolean deletePersonJob(TPersonJob tPersonJob) {
+        int ret = personJobDao.deletePersonJob(tPersonJob);
+        if (ret < 1){
+            throw new MyException(ResultEnum.ERROR.getCode(),"删除失败");
+        }
+        return true;
     }
 }

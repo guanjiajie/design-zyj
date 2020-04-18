@@ -15,4 +15,7 @@ public interface PersonJobDao {
 
     List<TPersonJob> getPersonJobList(TPersonJob tPersonJob);
     BigInteger getPersonJobListCount(TPersonJob tPersonJob);
+
+    int addPersonJob(TPersonJob tPersonJob);
+    int deletePersonJob(TPersonJob tPersonJob);
 }

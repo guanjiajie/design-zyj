@@ -24,9 +24,41 @@ public class PersonJobController {
     private Logger logger = Logger.getLogger(this.getClass());
 
     @PostMapping("/getPersonJobList")
-    public Result getPersonJobList(@RequestBody TPersonJob tPersonJob){
+    public Result getPersonJobList( TPersonJob tPersonJob){
         try {
             return Result.success(iPersonJobService.getPersonJobList(tPersonJob));
+        } catch (MyException me){
+            me.printStackTrace();
+            logger.error(ResultEnum.ERROR.getCode(),me);
+            return Result.error(ResultEnum.ERROR.getCode(),ResultEnum.ERROR.getMsg());
+        } catch (Exception e){
+            e.printStackTrace();
+            logger.error(ResultEnum.UNKONW_ERROR.getCode(),e);
+            return Result.error(ResultEnum.UNKONW_ERROR.getCode(),ResultEnum.UNKONW_ERROR.getMsg());
+        }
+    }
+
+    @PostMapping("/addPersonJob")
+    public Result addPersonJob( TPersonJob tPersonJob){
+        try {
+            iPersonJobService.addPersonJob(tPersonJob);
+            return Result.success();
+        } catch (MyException me){
+            me.printStackTrace();
+            logger.error(ResultEnum.ERROR.getCode(),me);
+            return Result.error(ResultEnum.ERROR.getCode(),ResultEnum.ERROR.getMsg());
+        } catch (Exception e){
+            e.printStackTrace();
+            logger.error(ResultEnum.UNKONW_ERROR.getCode(),e);
+            return Result.error(ResultEnum.UNKONW_ERROR.getCode(),ResultEnum.UNKONW_ERROR.getMsg());
+        }
+    }
+
+    @PostMapping("/deletePersonJob")
+    public Result deletePersonJob( TPersonJob tPersonJob){
+        try {
+            iPersonJobService.deletePersonJob(tPersonJob);
+            return Result.success();
         } catch (MyException me){
             me.printStackTrace();
             logger.error(ResultEnum.ERROR.getCode(),me);

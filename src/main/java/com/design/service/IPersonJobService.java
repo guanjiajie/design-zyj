@@ -10,4 +10,7 @@ import com.design.entity.TPersonJob;
 public interface IPersonJobService {
 
     Page<TPersonJob> getPersonJobList(TPersonJob tPersonJob);
+
+    boolean addPersonJob(TPersonJob tPersonJob);
+    boolean deletePersonJob(TPersonJob tPersonJob);
 }
