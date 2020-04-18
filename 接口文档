@@ -548,3 +548,29 @@ response: {
               "msg": "成功！"
           }
 ---------------------------------------
+添加周工作
+/personJob/addPersonJob
+request ： {
+          	"createName":"官佳杰",
+          	"createTime":"2020-04-18",
+          	"startTime":"2020-04-13",
+          	"endTime":"2020-04-19",
+          	"workTime":"5",
+          	"workContent":"没啥事，划水"
+
+          }
+ response : {
+                "code": 100,
+                "msg": "成功！"
+            }
+--------------------------------------
+删除周工作
+/personJob/deletePersonJob
+request: {
+         	"id":3
+         }
+response: {
+              "code": 100,
+              "msg": "成功！"
+          }
+------------------------------------
