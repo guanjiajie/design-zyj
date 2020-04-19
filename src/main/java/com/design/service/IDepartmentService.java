@@ -5,7 +5,7 @@ import com.design.entity.TDepartment;
 import java.util.List;
 
 /**
- * @Author: guanjiajie
+ * @Author: zhu
  * @Date: 2020/4/9 14:06
  */
 public interface IDepartmentService {

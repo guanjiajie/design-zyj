@@ -6,7 +6,7 @@ import com.design.entity.TNotice;
 import java.util.List;
 
 /**
- * @Author: guanjiajie
+ * @Author: zhu
  * @Date: 2020/4/14 17:55
  */
 public interface IArticleService {

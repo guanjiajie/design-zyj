@@ -4,7 +4,7 @@ import com.design.common.Page;
 import com.design.entity.TPersonJob;
 
 /**
- * @Author: guanjiajie
+ * @Author: zhu
  * @Date: 2020/4/18 14:54
  */
 public interface IPersonJobService {
