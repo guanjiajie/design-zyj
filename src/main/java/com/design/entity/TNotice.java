@@ -11,19 +11,19 @@ public class TNotice extends PageModel {
   private String status;
   private String noticeTitle;
   private String noticeContent;
-  private String read_status;
+  private String readStatus;
 
   private List<TNotice> notices1; //企业
   private List<TNotice> notices2; //私信
   private List<TNotice> notices3; //系统
 
 
-  public String getRead_status() {
-    return read_status;
+  public String getReadStatus() {
+    return readStatus;
   }
 
-  public void setRead_status(String read_status) {
-    this.read_status = read_status;
+  public void setReadStatus(String readStatus) {
+    this.readStatus = readStatus;
   }
 
   public List<TNotice> getNotices1() {
