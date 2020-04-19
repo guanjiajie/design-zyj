@@ -19,4 +19,5 @@ public interface ArticleDao {
 
     int addArticle(TArticle tArticle);
     int deleteArticle(TArticle tArticle);
+    int updateNotice(TNotice tNotice);
 }

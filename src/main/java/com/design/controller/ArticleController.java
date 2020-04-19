@@ -85,4 +85,20 @@ public class ArticleController {
         }
     }
 
+    @PostMapping("/updateNotice")
+    public Result updateNotice(TNotice tNotice){
+        try {
+            iArticleService.updateNotice(tNotice);
+            return Result.success();
+        } catch (MyException me){
+            me.printStackTrace();
+            logger.error(ResultEnum.ERROR.getCode(),me);
+            return Result.error(ResultEnum.ERROR.getCode(),ResultEnum.ERROR.getMsg());
+        } catch (Exception e){
+            e.printStackTrace();
+            logger.error(ResultEnum.UNKONW_ERROR.getCode(),e);
+            return Result.error(ResultEnum.UNKONW_ERROR.getCode(),ResultEnum.UNKONW_ERROR.getMsg());
+        }
+    }
+
 }

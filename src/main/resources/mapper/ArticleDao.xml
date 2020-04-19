@@ -25,4 +25,13 @@
         where 1=1
         and id=#{id}
     </delete>
+
+    <update id="updateNotice" parameterType="com.design.entity.TNotice">
+        update db_design.t_notice
+        <set>
+            read_status=#{readStatus},
+        </set>
+        where 1=1
+        and id=#{id}
+    </update>
 </mapper>

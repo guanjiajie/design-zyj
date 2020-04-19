@@ -72,4 +72,13 @@ public class ArticleServiceImpl implements IArticleService {
         }
         return true;
     }
+
+    @Override
+    public boolean updateNotice(TNotice tNotice) {
+        int ret = articleDao.updateNotice(tNotice);
+        if (ret < 1){
+            throw new MyException(ResultEnum.ERROR.getCode(),"修改失败");
+        }
+        return true;
+    }
 }

@@ -574,3 +574,13 @@ response: {
               "msg": "成功！"
           }
 ------------------------------------
+修改通知状态
+/article/updateNotice
+request : {
+    "id":1
+}
+
+response: {
+    "code":100,
+    "msg":"成功”
+}

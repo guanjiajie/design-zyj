@@ -16,4 +16,5 @@ public interface IArticleService {
 
     boolean addArticle(TArticle tArticle);
     boolean deleteArticle(TArticle tArticle);
+    boolean updateNotice(TNotice tNotice);
 }
