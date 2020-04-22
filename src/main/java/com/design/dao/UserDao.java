@@ -11,4 +11,5 @@ import org.springframework.stereotype.Repository;
 public interface UserDao {
 
     TLoginuser getLoginUser(TLoginuser tLoginuser);
+    int register(TLoginuser tLoginuser);
 }

@@ -9,4 +9,5 @@ import com.design.entity.TLoginuser;
 public interface IUserService {
 
     TLoginuser login(TLoginuser tLoginuser);
+    boolean register(TLoginuser tLoginuser);
 }

@@ -33,4 +33,13 @@ public class UserServiceImpl implements IUserService {
             throw new MyException(ResultEnum.ERROR.getCode(),"用户名或密码错误");
 
     }
+
+    @Override
+    public boolean register(TLoginuser tLoginuser) {
+        int ret = userDao.register(tLoginuser);
+        if (ret < 1){
+            throw new MyException(ResultEnum.ERROR.getCode(),"注册失败");
+        }
+        return false;
+    }
 }
