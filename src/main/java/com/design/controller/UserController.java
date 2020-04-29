@@ -57,7 +57,7 @@ public class UserController {
         } catch (MyException me){
             me.printStackTrace();
             logger.error(ResultEnum.ERROR.getCode(),me);
-            return Result.error(ResultEnum.ERROR.getCode(),ResultEnum.ERROR.getMsg());
+            return Result.error(ResultEnum.ERROR.getCode(), me.getMessage());
         } catch (Exception e){
             e.printStackTrace();
             logger.error(ResultEnum.UNKONW_ERROR.getCode(),e);
