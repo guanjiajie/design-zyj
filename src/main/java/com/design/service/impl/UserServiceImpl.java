@@ -36,6 +36,10 @@ public class UserServiceImpl implements IUserService {
 
     @Override
     public boolean register(TLoginuser tLoginuser) {
+        TLoginuser user = userDao.getLoginUser(tLoginuser);
+        if (!EmptyUtil.isEmpty(user)){
+            throw new MyException(ResultEnum.ERROR.getCode(),"该用户名已存在");
+        }
         int ret = userDao.register(tLoginuser);
         if (ret < 1){
             throw new MyException(ResultEnum.ERROR.getCode(),"注册失败");
