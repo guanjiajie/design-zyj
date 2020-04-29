@@ -11,6 +11,6 @@
 
     <insert id="register" parameterType="com.design.entity.TLoginuser">
         insert into db_design.t_loginuser (username, password)
-        values (#{userName},#{password})
+        values (#{username},#{password})
     </insert>
 </mapper>
