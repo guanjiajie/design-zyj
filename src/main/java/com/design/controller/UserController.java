@@ -47,4 +47,21 @@ public class UserController {
             return Result.error(ResultEnum.UNKONW_ERROR.getCode(),ResultEnum.UNKONW_ERROR.getMsg());
         }
     }
+
+    @PostMapping("/register")
+    @ResponseBody
+    public Result register( TLoginuser tLoginuser){
+        try {
+            iUserService.register(tLoginuser);
+            return Result.success();
+        } catch (MyException me){
+            me.printStackTrace();
+            logger.error(ResultEnum.ERROR.getCode(),me);
+            return Result.error(ResultEnum.ERROR.getCode(),ResultEnum.ERROR.getMsg());
+        } catch (Exception e){
+            e.printStackTrace();
+            logger.error(ResultEnum.UNKONW_ERROR.getCode(),e);
+            return Result.error(ResultEnum.UNKONW_ERROR.getCode(),ResultEnum.UNKONW_ERROR.getMsg());
+        }
+    }
 }
